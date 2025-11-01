@@ -14,15 +14,20 @@
 
 ---
 
-**Problem:** 73% of enterprises ban ChatGPT. Alternative: $5M private LLMs.  
-**Solution:** Automatic PII protection that works for 1 user or 10,000 employees.  
-**Result:** Use best AI models safely. Zero infrastructure. Zero data leaks.
+**Problem:** Many enterprises ban ChatGPT and other AI tools. Alternative: $5M private LLMs.  
+**Solution:** Automatic PII protection in the background that works for 1 user or 10,000 employees.  
+**Result:** Use the best AI models safely. Zero infrastructure. Zero data leaks.
 
 [Install Now](#-installation) • [Technical Details](#-technical-execution-showcasing-chromes-built-in-ai) • [GitHub](https://github.com/dsmih/clipshield)
 
 ---
 
+### Why This Happens
+
+**It's not ignorance—it's human nature.** People don't intentionally share PII. They paste entire email threads without scrolling to check for signature blocks. They upload meal photos without noticing the credit card on the table. They copy documents without removing incidental contact information. The PII isn't *needed* by AI—it's just embedded in the content people naturally share. Manual redaction takes 30-60 seconds per paste. People are busy. They skip it. Friction loses to convenience, every time.
 ## 🎯 Purpose: Solving the $5M Enterprise AI Problem
+
+---
 
 ### The Problem Scale
 
@@ -59,7 +64,7 @@
 - Real-time stats show protection in action
 - Restores original data when copying AI responses
 
-**1,964 PII items protected in internal testing** across 113 conversations
+**2300+ PII items protected in internal testing** across 140+ conversations
 
 ---
 
@@ -458,7 +463,7 @@ document.addEventListener('visibilitychange', () => {
 - AI mode: 95%+ (context-aware, catches typos and misspellings, all PII types)
 - False positive rate: <3%
 
-**Current limitation:** 2-4s delay on first paste (AI session creation + analysis). Will improve as Chrome's on-device AI optimizes. Like antivirus software—users accept brief security scans for protection.
+**Current limitation:** 2-4s delay on first paste (AI session creation + analysis). Will improve as Chrome's on-device AI optimises. Like antivirus software, users accept brief security scans to protect themselves.
 
 ---
 
@@ -480,7 +485,7 @@ document.addEventListener('visibilitychange', () => {
 - ⌨️ **Bypass Shortcut** - Cmd/Ctrl+Shift+V to paste unprotected
 - 📊 **Live Stats** - Real-time protection counter in badge
 - 🌐 **Custom Sites** - Works on any AI site, not just ChatGPT/Claude/Gemini
-- 🎨 **Visual Feedback** - Minimizing status indicator, click to toggle protection ON/OFF
+- 🎨 **Visual Feedback** - Minimising status indicator, click to toggle protection ON/OFF
 
 ### Supported Sites (Default)
 - ChatGPT (chatgpt.com)
@@ -513,52 +518,51 @@ document.addEventListener('visibilitychange', () => {
 **1. Functionality (Scalability - How well APIs are used)**
 - ✅ Scales from 1 user to 10,000+ employees (local processing = infinite scale)
 - ✅ Works globally (US/UK formats, extensible to any region)
-- ✅ Multi-audience (consumers, SMBs, enterprises)
+- ✅ Multi-audience (consumers, SMBs and SMEs, enterprises)
 - ✅ Prompt API: Dynamic system prompts adapt to user settings
 - ✅ Multimodal API: Perfect use case (visual PII detection)
 
 **2. Purpose (Compelling Problem + Repeat Usage)**
-- ✅ Solves $5M enterprise problem (vs. private LLM alternative)
+- ✅ Solves EXPENSIVE enterprise problem (vs. private LLM or complex DLP alternatives)
 - ✅ Enables 73% of companies to unban ChatGPT safely
-- ✅ Daily repeat value: 1,964 items protected in testing
+- ✅ Daily repeat value: ~800 items protected daily in testing
 - ✅ Compliance-critical (HIPAA, GDPR, PCI-DSS)
 
 **3. Content (Creativity + Visual Quality)**
-- ✅ Novel approach: Privacy layer for AI (not just another chatbot)
+- ✅ Novel approach: Privacy layer for AI
 - ✅ Invisible UX: Most creative when users don't notice
-- ✅ Professional design: Clean indicator, modal, settings
+- ✅ Professional design: Clean indicator, modal, granular settings, help/guides
 - ✅ Demo video: <3 min, showcases problem → solution → impact
 
 **4. User Experience (Ease of Use)**
 - ✅ Zero-click setup: Install → works immediately
 - ✅ Non-intrusive: Auto-intercept (no permission modals 50x/day)
-- ✅ Power user controls: Bypass shortcut, granular settings
-- ✅ Smart defaults: Works out of box, customizable when needed
+- ✅ Power user controls: Granular settings, bypass keyboard shortcut (cmd + shft + V on Mac, Ctrl + Shft + V on Windows)
+- ✅ Smart defaults: Works out of the box, customisable when needed
 
 **5. Technical Execution (Showcasing Chrome AI)**
 - ✅ **Prompt API (Text):** Dynamic prompts, custom pattern teaching
 - ✅ **Prompt API (Multimodal):** Image PII detection
-- ✅ **Advanced optimization:** Session warming (50% faster)
+- ✅ **Advanced optimisation:** Session warming (50% faster)
 - ✅ **Novel usage:** AI learns from user examples, not regex programming
 - ✅ **Production-ready:** Handles edge cases (overlap detection, cross-site compatibility)
 
 ### Chrome AI APIs Used
 
 1. **Prompt API (Text Mode)** - Context-aware PII detection with dynamic system prompts
-2. **Prompt API (Multimodal Mode)** - Image analysis for sensitive documents  
-3. **Session Management** - Pre-warming optimization for performance
+2. **Prompt API (Multimodal Mode)** - Image analysis for sensitive documents and visual PII 
 
 ### Why ClipShield Wins
 
 **Perfect Use Case for On-Device AI:**
 - Privacy tool that REQUIRES local processing (can't send PII to server for detection!)
 - Demonstrates WHY Chrome's built-in AI matters
-- Shows Google staying ahead in privacy-first AI
+- Shows Google staying ahead in privacy-first AI enablement 
 
 **Production Quality:**
-- Not a demo—actually protects 1,964 items in testing
+- Not a demo—actually protects PII items in testing
 - Handles real-world edge cases
-- Performance-optimized (50% faster with warm sessions)
+- Performance-optimised
 
 **Clear Value:**
 - Solves $5M problem for enterprises
@@ -570,14 +574,14 @@ document.addEventListener('visibilitychange', () => {
 ## 📈 Impact & Metrics
 
 **Internal Testing Results:**
-- **1,964** PII items protected across 113 conversations
+- **2300+** PII items protected across 140+ conversations
 - **87%** of pastes contained PII (validates problem severity)
-- **17** PII items per paste average
+- **16** PII items per paste average
 
 **vs. Alternatives:**
 - Traditional DLP: complex setup, $50k+/year, access friction
-- Private LLM: expensive deployment and maintenance, complex and time consuming to setup and maintain, limited AI quality
-- **ClipShield: 5 minutes, $0, best AI models**
+- Private LLM: expensive deployment and maintenance, complex and time-consuming to set up and maintain, limited AI quality
+- **ClipShield: 5 minutes, $0, use the best AI models, hassle and worry-free**
 
 ---
 
@@ -586,9 +590,9 @@ document.addEventListener('visibilitychange', () => {
 | Industry              | Use Case                                          | PII Protected                             | Compliance       |
 |:----------------------|:--------------------------------------------------|:------------------------------------------|:-----------------|
 | **Healthcare**        | Doctors using ChatGPT for differential diagnosis  | Patient names, MRNs, DOBs                 | HIPAA & GDPR     |
-| **Customer Service**  | Support agents summarizing tickets                | Customer emails, phones, addresses        | GDPR, CCPA       |
+| **Customer Service**  | Support agents summarising tickets                | Customer emails, phones, addresses        | GDPR, CCPA       |
 | **HR**                | Recruiters screening candidates with AI           | Candidate SSNs, contact info, address     | EEOC, GDPR       |
-| **Legal**             | Lawyers analyzing contracts                       | Client names, case IDs, confidential terms| ABA Ethics, GDPR |
+| **Legal**             | Lawyers analysing contracts                       | Client names, case IDs, confidential terms| ABA Ethics, GDPR |
 | **Finance**           | Analysts researching companies                    | Account numbers, transaction details      | PCI-DSS, SOX     |
 
 ---
@@ -604,14 +608,14 @@ document.addEventListener('visibilitychange', () => {
    - Set to: **Enabled**
 3. **Restart Chrome completely**
 
-**Step 2: Download AI Model** (Takes 2-5 minutes)
+**Step 2: Download AI Model** (Takes 2-10 minutes)
 1. Open `chrome://components/`
 2. Find "**Optimization Guide On Device Model**"
 3. Click "**Check for update**"
 4. Wait for download to complete
 
-**Step 3: Install Extension** (2 minutes)
-1. Clone repo: `git clone https://github.com/dsmih/clipshield`
+**Step 3: Load Extension** (2 minutes)
+1. Clone repo: `git clone https://github.com/dsmih/clipshield` or download the folder
 2. Open `chrome://extensions/`
 3. Enable "**Developer mode**" (top right)
 4. Click "**Load unpacked**"
@@ -642,8 +646,8 @@ cd clipshield
 
 Then:
 1. Open `chrome://extensions/`
-2. Enable "Developer mode" (top right)
-3. Click "Load unpacked"
+2. Enable "Developer mode" (top right toggle)
+3. Click "Load unpacked" (top left button)
 4. Select the `clipshield` folder
 5. Visit ChatGPT/Claude/Gemini → You're protected!
 
@@ -675,18 +679,17 @@ Open DevTools → Network tab during paste. Zero requests fired.
 **Prompt API** (with multimodal capabilities):
 - **Text mode:** Dynamic system prompts, custom pattern teaching, context-aware PII detection
 - **Multimodal mode:** Image analysis for sensitive documents (credit cards, IDs, passports)
-- **Session management:** Pre-warming optimization for 50% performance boost
 
 ### Challenge Categories
 - **Primary:** Most Helpful Chrome Extension
 - **Secondary:** Best Multimodal AI Application
 
 
-- ✅ **Solves $5M+ problem** (enterprise AI safety)
+- ✅ **Solves huge commercial problem** (enterprise AI data safety)
 - ✅ **Novel API usage** (dynamic prompts for custom patterns)
-- ✅ **Production-ready** (handles edge cases, optimized performance)
-- ✅ **Clear repeat value** (daily usage for all employees)
-- ✅ **Scalable impact** (millions of potential consumer users)
+- ✅ **Production-ready** (handles edge cases, optimised performance)
+- ✅ **Clear repeat value** (daily usage for all)
+- ✅ **Scalable impact** (hundreds of millions of potential consumer users)
 
 ---
 

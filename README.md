@@ -14,15 +14,20 @@
 
 ---
 
-**Problem:** 73% of enterprises ban ChatGPT. Alternative: $5M private LLMs.  
-**Solution:** Automatic PII protection that works for 1 user or 10,000 employees.  
-**Result:** Use best AI models safely. Zero infrastructure. Zero data leaks.
+**Problem:** Many enterprises ban ChatGPT and other AI tools. Alternative: $5M private LLMs.  
+**Solution:** Automatic PII protection in the background that works for 1 user or 10,000 employees.  
+**Result:** Use the best AI models safely. Zero infrastructure. Zero data leaks.
 
 [Install Now](#-installation) • [Technical Details](#-technical-execution-showcasing-chromes-built-in-ai) • [GitHub](https://github.com/dsmih/clipshield)
 
 ---
 
+### Why This Happens
+
+**It's not ignorance—it's human nature.** People don't intentionally share PII. They paste entire email threads without scrolling to check for signature blocks. They upload meal photos without noticing the credit card on the table. They copy documents without removing incidental contact information. The PII isn't *needed* by AI—it's just embedded in the content people naturally share. Manual redaction takes 30-60 seconds per paste. People are busy. They skip it. Friction loses to convenience, every time.
 ## 🎯 Purpose: Solving the $5M Enterprise AI Problem
+
+---
 
 ### The Problem Scale
 

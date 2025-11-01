@@ -668,6 +668,15 @@ async function detectTextPII(text) {
               itemType = 'miscellaneous';
             }
             
+            // Filter out email domains detected as companies when email is disabled
+            if (itemType === 'company' && enabledPiiTypes.email === false) {
+              // Check if this looks like an email domain (contains @ or looks like domain.com)
+              if (item.value.includes('@') || /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(item.value)) {
+                console.log(`⏭️ Skipping email domain "${item.value}" detected as company (email disabled)`);
+                continue;
+              }
+            }
+            
             // Check if this type is disabled in settings
             if (enabledPiiTypes[itemType] === false) {
               console.log(`⏭️ ${itemType} is disabled in settings, skipping "${item.value}"`);

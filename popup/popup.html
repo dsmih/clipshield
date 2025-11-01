@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClipShield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-section">
+      <img src="../icons/Full logo.png" alt="ClipShield" class="logo">
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Power Button -->
+    <div class="power-button-section">
+      <button class="power-button active pulse-active" id="power-button">
+        <div class="power-icon">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v10M18.4 6.6a9 9 0 1 1-12.77.04"/>
+          </svg>
+        </div>
+        <div class="power-status" id="power-status">AI PRIVACY ACTIVE</div>
+        <div class="live-badge" id="live-badge">PROTECTING NOW</div>
+      </button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-box hover-lift">
+        <div class="stat-number" id="protected-count" data-target="0">0</div>
+        <div class="stat-label">Protected</div>
+      </div>
+      <div class="stat-box hover-lift">
+        <div class="stat-number" id="paste-count" data-target="0">0</div>
+        <div class="stat-label">Pastes</div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+      <div class="feature">
+        <span class="feature-icon">🤖</span>
+        <span class="feature-text">Powered by Chrome Built-in AI</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🔐</span>
+        <span class="feature-text">100% Private, On-Device Processing</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🚫</span>
+        <span class="feature-text">Zero Server Calls</span>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+      <a href="#" class="link-item" id="setup-link">
+        <span>🚀</span> First Time Setup
+        <span class="link-subtitle">(enable Chrome AI in 3 steps)</span>
+      </a>
+      <a href="#" class="link-item" id="settings-link">
+        <span>⚙️</span> Settings
+        <span class="link-subtitle">(customize protection)</span>
+      </a>
+      <a href="#" class="link-item" id="how-it-works">
+        <span>📖</span> How does it work?
+      </a>
+      <a href="#" class="link-item" id="github-link">
+        <span>💻</span> View on GitHub
+        <span class="link-subtitle">(for security audits)</span>
+      </a>
+    </div>
+
+    <!-- Setup Modal (hidden by default) -->
+    <div class="modal" id="setup-modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🚀 First Time Setup</h2>
+          <button class="modal-close" id="close-setup">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p style="margin-bottom: 20px; color: #6B7280;">ClipShield requires Chrome's built-in AI. Follow these steps once:</p>
+          
+          <div class="setup-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Enable Optimization Guide</h3>
+              <p>Open: <code>chrome://flags/#optimization-guide-on-device-model</code></p>
+              <p>Set to: <strong>Enabled BypassPerfRequirement</strong></p>
+            </div>
+          </div>
+
+          <div class="setup-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Enable Prompt API</h3>
+              <p>Open: <code>chrome://flags/#prompt-api-for-gemini-nano</code></p>
+              <p>Set to: <strong>Enabled</strong></p>
+            </div>
+          </div>
+
+          <div class="setup-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Restart Chrome</h3>
+              <p>Close and reopen Chrome completely</p>
+            </div>
+          </div>
+
+          <div class="setup-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Download AI Model</h3>
+              <p>Open: <code>chrome://components/</code></p>
+              <p>Find: <strong>"Optimization Guide On Device Model"</strong></p>
+              <p>Click: <strong>"Check for update"</strong></p>
+              <p style="color: #F59E0B; margin-top: 8px;">⏳ Wait 2-5 minutes for download</p>
+            </div>
+          </div>
+
+          <div class="setup-complete">
+            <p>✅ Done! Visit ChatGPT, Claude, or Gemini to test.</p>
+            <p style="font-size: 13px; color: #6B7280; margin-top: 8px;">
+              Paste this test: "Email john@email.com or call 555-1234"<br>
+              You should see placeholders like [EMAIL_xxx]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Built by <a href="https://papi.tech/" target="_blank" class="footer-link">Papi Labs</a>
+    </div>
+  </div>
+
+  <script src="../utils/custom-patterns.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
